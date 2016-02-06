@@ -1,0 +1,650 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		270E74D11C29BD4E005A6D6D /* e82807f2784c9ab7932cf47e0a9962e7.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 270E74D01C29BD4E005A6D6D /* e82807f2784c9ab7932cf47e0a9962e7.jpeg */; };
+		270E74D51C29C35F005A6D6D /* TacoHD.png in Resources */ = {isa = PBXBuildFile; fileRef = 270E74D41C29C35F005A6D6D /* TacoHD.png */; };
+		272E64B11C2E411B0063647F /* SELLO TIF.png in Resources */ = {isa = PBXBuildFile; fileRef = 272E64B01C2E411B0063647F /* SELLO TIF.png */; };
+		273EA9AE1C3868C200D85048 /* PressedColor.png in Resources */ = {isa = PBXBuildFile; fileRef = 273EA9AD1C3868C200D85048 /* PressedColor.png */; };
+		275E71541C445AAD009CB9B6 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 275E71531C445AAD009CB9B6 /* AVFoundation.framework */; };
+		275E71561C446E9F009CB9B6 /* TriangleSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 275E71551C446E9F009CB9B6 /* TriangleSound.mp3 */; };
+		275E71581C447589009CB9B6 /* CompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275E71571C447589009CB9B6 /* CompraViewController.swift */; };
+		275E715A1C44783E009CB9B6 /* CompraTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 275E71591C44783E009CB9B6 /* CompraTableViewCell.swift */; };
+		4A1F2AD11BEFEC9A00B88729 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1F2AD01BEFEC9A00B88729 /* AppDelegate.swift */; };
+		4A1F2AD61BEFEC9A00B88729 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A1F2AD41BEFEC9A00B88729 /* Main.storyboard */; };
+		4A1F2AD81BEFEC9A00B88729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A1F2AD71BEFEC9A00B88729 /* Assets.xcassets */; };
+		4A1F2ADB1BEFEC9A00B88729 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A1F2AD91BEFEC9A00B88729 /* LaunchScreen.storyboard */; };
+		4A24A3551C5426FE00B947E3 /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A24A3541C5426FE00B947E3 /* RegistroViewController.swift */; };
+		4A24A3571C54275100B947E3 /* persona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A24A3561C54275100B947E3 /* persona.swift */; };
+		4A4D43201BEFFB750021379F /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D431F1BEFFB750021379F /* SideMenu.swift */; };
+		4A848E4B1C500B23004FF1FA /* Cupones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A848E4A1C500B23004FF1FA /* Cupones.swift */; };
+		4A8691F91C4DFDCF008CAAD4 /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8691F81C4DFDCF008CAAD4 /* Internet.swift */; };
+		612462D01C229F8C0091539E /* backgroundNB.png in Resources */ = {isa = PBXBuildFile; fileRef = 612462CF1C229F8C0091539E /* backgroundNB.png */; };
+		614072201C44ABD10014D7B1 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6140721F1C44ABD00014D7B1 /* libsqlite3.0.tbd */; };
+		6140722D1C44AC1C0014D7B1 /* DBSupremaSalsa.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 614072221C44AC1C0014D7B1 /* DBSupremaSalsa.sqlite */; };
+		6140722E1C44AC1C0014D7B1 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 614072241C44AC1C0014D7B1 /* FMDatabase.m */; };
+		6140722F1C44AC1C0014D7B1 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 614072271C44AC1C0014D7B1 /* FMDatabaseAdditions.m */; };
+		614072301C44AC1C0014D7B1 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 614072291C44AC1C0014D7B1 /* FMDatabasePool.m */; };
+		614072311C44AC1C0014D7B1 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 6140722B1C44AC1C0014D7B1 /* FMDatabaseQueue.m */; };
+		614072321C44AC1C0014D7B1 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 6140722C1C44AC1C0014D7B1 /* FMResultSet.m */; };
+		614072371C44AC880014D7B1 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614072341C44AC880014D7B1 /* Utility.swift */; };
+		614072381C44AC880014D7B1 /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614072351C44AC880014D7B1 /* ModelManager.swift */; };
+		614072391C44AC880014D7B1 /* productos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 614072361C44AC880014D7B1 /* productos.swift */; };
+		615C7CF21C278D4E002B88F7 /* logo_top_navigationbar_120x35px.png in Resources */ = {isa = PBXBuildFile; fileRef = 615C7CF11C278D4E002B88F7 /* logo_top_navigationbar_120x35px.png */; };
+		616010661C5F45C80050A60E /* imagenPerfil.txt in Resources */ = {isa = PBXBuildFile; fileRef = 616010651C5F45C80050A60E /* imagenPerfil.txt */; };
+		6165A0DE1BEFEF3600D818A9 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6165A0DD1BEFEF3600D818A9 /* SWRevealViewController.m */; };
+		6165A0E21BEFF6BF00D818A9 /* CartaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6165A0E11BEFF6BF00D818A9 /* CartaViewController.swift */; };
+		6165A0E41BEFF6D600D818A9 /* CuponesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6165A0E31BEFF6D600D818A9 /* CuponesViewController.swift */; };
+		6165A0E61BEFF6EC00D818A9 /* SucursalesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6165A0E51BEFF6EC00D818A9 /* SucursalesViewController.swift */; };
+		6165A0E81BEFF6F700D818A9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6165A0E71BEFF6F700D818A9 /* SettingsViewController.swift */; };
+		6165A0EA1BF0086A00D818A9 /* CuentaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6165A0E91BF0086A00D818A9 /* CuentaViewController.swift */; };
+		6165A0EE1BF00B5D00D818A9 /* CartaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6165A0ED1BF00B5D00D818A9 /* CartaCollectionViewCell.swift */; };
+		6165A12E1BF015CC00D818A9 /* aguaHorchata.png in Resources */ = {isa = PBXBuildFile; fileRef = 6165A11A1BF015CC00D818A9 /* aguaHorchata.png */; };
+		6165A12F1BF015CC00D818A9 /* aguaJamaica.png in Resources */ = {isa = PBXBuildFile; fileRef = 6165A11B1BF015CC00D818A9 /* aguaJamaica.png */; };
+		6165A1301BF015CC00D818A9 /* aguasimple.png in Resources */ = {isa = PBXBuildFile; fileRef = 6165A11C1BF015CC00D818A9 /* aguasimple.png */; };
+		6165A1311BF015CC00D818A9 /* arabeKilo.png in Resources */ = {isa = PBXBuildFile; fileRef = 6165A11D1BF015CC00D818A9 /* arabeKilo.png */; };
+		6165A1321BF015CC00D818A9 /* arrachera.png in Resources */ = {isa = PBXBuildFile; fileRef = 6165A11E1BF015CC00D818A9 /* arrachera.png */; };
+		6165A1331BF015CC00D818A9 /* burrito.png in Resources */ = {isa = PBXBuildFile; fileRef = 6165A11F1BF015CC00D818A9 /* burrito.png */; };
+		6165A1341BF015CC00D818A9 /* carnepastormenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 6165A1201BF015CC00D818A9 /* carnepastormenu.png */; };
+		6165A1351BF015CC00D818A9 /* cebollitas.png in Resources */ = {isa = PBXBuildFile; fileRef = 6165A1211BF015CC00D818A9 /* cebollitas.png */; };
+		6165A1361BF015CC00D818A9 /* chalupas.png in Resources */ = {isa = PBXBuildFile; fileRef = 6165A1221BF015CC00D818A9 /* chalupas.png */; };
+		6165A1371BF015CC00D818A9 /* Chistorra.png in Resources */ = {isa = PBXBuildFile; fileRef = 6165A1231BF015CC00D818A9 /* Chistorra.png */; };
+		6165A1381BF015CC00D818A9 /* cincoTacosPastor.png in Resources */ = {isa = PBXBuildFile; fileRef = 6165A1241BF015CC00D818A9 /* cincoTacosPastor.png */; };
+		6165A1391BF015CC00D818A9 /* cochinita2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6165A1251BF015CC00D818A9 /* cochinita2.png */; };
+		6165A13A1BF015CC00D818A9 /* costillas.png in Resources */ = {isa = PBXBuildFile; fileRef = 6165A1261BF015CC00D818A9 /* costillas.png */; };
+		6165A13B1BF015CC00D818A9 /* frijoles.png in Resources */ = {isa = PBXBuildFile; fileRef = 6165A1271BF015CC00D818A9 /* frijoles.png */; };
+		6165A13C1BF015CC00D818A9 /* gringa.png in Resources */ = {isa = PBXBuildFile; fileRef = 6165A1281BF015CC00D818A9 /* gringa.png */; };
+		6165A13D1BF015CC00D818A9 /* sincronizada.png in Resources */ = {isa = PBXBuildFile; fileRef = 6165A1291BF015CC00D818A9 /* sincronizada.png */; };
+		6165A13E1BF015CC00D818A9 /* sirlon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6165A12A1BF015CC00D818A9 /* sirlon.png */; };
+		6165A13F1BF015CC00D818A9 /* taco arabe.png in Resources */ = {isa = PBXBuildFile; fileRef = 6165A12B1BF015CC00D818A9 /* taco arabe.png */; };
+		6165A1401BF015CC00D818A9 /* tacobistec.png in Resources */ = {isa = PBXBuildFile; fileRef = 6165A12C1BF015CC00D818A9 /* tacobistec.png */; };
+		6165A1411BF015CC00D818A9 /* unTacoPastor.png in Resources */ = {isa = PBXBuildFile; fileRef = 6165A12D1BF015CC00D818A9 /* unTacoPastor.png */; };
+		6175118F1C5522BF006F8E14 /* CuponesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6175118E1C5522BF006F8E14 /* CuponesTableViewCell.swift */; };
+		61A267A91C5F0ECA00E1B4C0 /* 55619.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A267A51C5F0ECA00E1B4C0 /* 55619.png */; };
+		61A267AA1C5F0ECA00E1B4C0 /* fb_black.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A267A61C5F0ECA00E1B4C0 /* fb_black.png */; };
+		61A267AB1C5F0ECA00E1B4C0 /* FONDO.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A267A71C5F0ECA00E1B4C0 /* FONDO.png */; };
+		61AC8FC41C34519F002D81FB /* ADVSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AC8FC31C34519F002D81FB /* ADVSegmentedControl.swift */; };
+		61AC8FC71C3451D7002D81FB /* cafeClaro.png in Resources */ = {isa = PBXBuildFile; fileRef = 61AC8FC51C3451D7002D81FB /* cafeClaro.png */; };
+		61AC8FC81C3451D7002D81FB /* cafeFuerte.png in Resources */ = {isa = PBXBuildFile; fileRef = 61AC8FC61C3451D7002D81FB /* cafeFuerte.png */; };
+		61D95AFF1C55F41B00015FB3 /* ExtraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D95AFE1C55F41B00015FB3 /* ExtraViewController.swift */; };
+		61D95B011C560A7700015FB3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D95B001C560A7700015FB3 /* MapKit.framework */; };
+		61E5F0811C27689E00DC0EFF /* carneMexi.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E5F0801C27689E00DC0EFF /* carneMexi.png */; };
+		61E5F0841C276A5700DC0EFF /* blackColorMexi.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E5F0821C276A5700DC0EFF /* blackColorMexi.png */; };
+		61E5F0851C276A5700DC0EFF /* brownColorMexi.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E5F0831C276A5700DC0EFF /* brownColorMexi.png */; };
+		61FF74241C4AF5070092C4C7 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = 61FF74231C4AF5070092C4C7 /* star.png */; };
+		61FF74261C4AF52B0092C4C7 /* startWhite.png in Resources */ = {isa = PBXBuildFile; fileRef = 61FF74251C4AF52B0092C4C7 /* startWhite.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		270E74D01C29BD4E005A6D6D /* e82807f2784c9ab7932cf47e0a9962e7.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = e82807f2784c9ab7932cf47e0a9962e7.jpeg; sourceTree = "<group>"; };
+		270E74D41C29C35F005A6D6D /* TacoHD.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TacoHD.png; sourceTree = "<group>"; };
+		272E64B01C2E411B0063647F /* SELLO TIF.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SELLO TIF.png"; sourceTree = "<group>"; };
+		273EA9AD1C3868C200D85048 /* PressedColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PressedColor.png; sourceTree = "<group>"; };
+		275E71531C445AAD009CB9B6 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		275E71551C446E9F009CB9B6 /* TriangleSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TriangleSound.mp3; sourceTree = "<group>"; };
+		275E71571C447589009CB9B6 /* CompraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompraViewController.swift; sourceTree = "<group>"; };
+		275E71591C44783E009CB9B6 /* CompraTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompraTableViewCell.swift; sourceTree = "<group>"; };
+		4A1F2ACD1BEFEC9A00B88729 /* Suprema Salsa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Suprema Salsa.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A1F2AD01BEFEC9A00B88729 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4A1F2AD51BEFEC9A00B88729 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4A1F2AD71BEFEC9A00B88729 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4A1F2ADA1BEFEC9A00B88729 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4A1F2ADC1BEFEC9A00B88729 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A24A3541C5426FE00B947E3 /* RegistroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
+		4A24A3561C54275100B947E3 /* persona.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = persona.swift; sourceTree = "<group>"; };
+		4A4D431F1BEFFB750021379F /* SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
+		4A848E4A1C500B23004FF1FA /* Cupones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cupones.swift; sourceTree = "<group>"; };
+		4A8691F81C4DFDCF008CAAD4 /* Internet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
+		612462CF1C229F8C0091539E /* backgroundNB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundNB.png; sourceTree = "<group>"; };
+		6140721F1C44ABD00014D7B1 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		614072221C44AC1C0014D7B1 /* DBSupremaSalsa.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DBSupremaSalsa.sqlite; sourceTree = "<group>"; };
+		614072231C44AC1C0014D7B1 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		614072241C44AC1C0014D7B1 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		614072251C44AC1C0014D7B1 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		614072261C44AC1C0014D7B1 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		614072271C44AC1C0014D7B1 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		614072281C44AC1C0014D7B1 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		614072291C44AC1C0014D7B1 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		6140722A1C44AC1C0014D7B1 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		6140722B1C44AC1C0014D7B1 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		6140722C1C44AC1C0014D7B1 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		614072341C44AC880014D7B1 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		614072351C44AC880014D7B1 /* ModelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		614072361C44AC880014D7B1 /* productos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = productos.swift; sourceTree = "<group>"; };
+		615C7CF11C278D4E002B88F7 /* logo_top_navigationbar_120x35px.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_top_navigationbar_120x35px.png; sourceTree = "<group>"; };
+		616010651C5F45C80050A60E /* imagenPerfil.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = imagenPerfil.txt; sourceTree = "<group>"; };
+		6165A0DB1BEFEF3500D818A9 /* Suprema Salsa-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Suprema Salsa-Bridging-Header.h"; sourceTree = "<group>"; };
+		6165A0DC1BEFEF3600D818A9 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		6165A0DD1BEFEF3600D818A9 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		6165A0E11BEFF6BF00D818A9 /* CartaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartaViewController.swift; sourceTree = "<group>"; };
+		6165A0E31BEFF6D600D818A9 /* CuponesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuponesViewController.swift; sourceTree = "<group>"; };
+		6165A0E51BEFF6EC00D818A9 /* SucursalesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SucursalesViewController.swift; sourceTree = "<group>"; };
+		6165A0E71BEFF6F700D818A9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		6165A0E91BF0086A00D818A9 /* CuentaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuentaViewController.swift; sourceTree = "<group>"; };
+		6165A0ED1BF00B5D00D818A9 /* CartaCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartaCollectionViewCell.swift; sourceTree = "<group>"; };
+		6165A11A1BF015CC00D818A9 /* aguaHorchata.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aguaHorchata.png; sourceTree = "<group>"; };
+		6165A11B1BF015CC00D818A9 /* aguaJamaica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aguaJamaica.png; sourceTree = "<group>"; };
+		6165A11C1BF015CC00D818A9 /* aguasimple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aguasimple.png; sourceTree = "<group>"; };
+		6165A11D1BF015CC00D818A9 /* arabeKilo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arabeKilo.png; sourceTree = "<group>"; };
+		6165A11E1BF015CC00D818A9 /* arrachera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrachera.png; sourceTree = "<group>"; };
+		6165A11F1BF015CC00D818A9 /* burrito.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = burrito.png; sourceTree = "<group>"; };
+		6165A1201BF015CC00D818A9 /* carnepastormenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carnepastormenu.png; sourceTree = "<group>"; };
+		6165A1211BF015CC00D818A9 /* cebollitas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cebollitas.png; sourceTree = "<group>"; };
+		6165A1221BF015CC00D818A9 /* chalupas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chalupas.png; sourceTree = "<group>"; };
+		6165A1231BF015CC00D818A9 /* Chistorra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chistorra.png; sourceTree = "<group>"; };
+		6165A1241BF015CC00D818A9 /* cincoTacosPastor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cincoTacosPastor.png; sourceTree = "<group>"; };
+		6165A1251BF015CC00D818A9 /* cochinita2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cochinita2.png; sourceTree = "<group>"; };
+		6165A1261BF015CC00D818A9 /* costillas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = costillas.png; sourceTree = "<group>"; };
+		6165A1271BF015CC00D818A9 /* frijoles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frijoles.png; sourceTree = "<group>"; };
+		6165A1281BF015CC00D818A9 /* gringa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gringa.png; sourceTree = "<group>"; };
+		6165A1291BF015CC00D818A9 /* sincronizada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sincronizada.png; sourceTree = "<group>"; };
+		6165A12A1BF015CC00D818A9 /* sirlon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sirlon.png; sourceTree = "<group>"; };
+		6165A12B1BF015CC00D818A9 /* taco arabe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "taco arabe.png"; sourceTree = "<group>"; };
+		6165A12C1BF015CC00D818A9 /* tacobistec.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tacobistec.png; sourceTree = "<group>"; };
+		6165A12D1BF015CC00D818A9 /* unTacoPastor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unTacoPastor.png; sourceTree = "<group>"; };
+		6175118E1C5522BF006F8E14 /* CuponesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CuponesTableViewCell.swift; sourceTree = "<group>"; };
+		61A267A51C5F0ECA00E1B4C0 /* 55619.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 55619.png; sourceTree = "<group>"; };
+		61A267A61C5F0ECA00E1B4C0 /* fb_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fb_black.png; sourceTree = "<group>"; };
+		61A267A71C5F0ECA00E1B4C0 /* FONDO.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FONDO.png; sourceTree = "<group>"; };
+		61AC8FC31C34519F002D81FB /* ADVSegmentedControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ADVSegmentedControl.swift; sourceTree = "<group>"; };
+		61AC8FC51C3451D7002D81FB /* cafeClaro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cafeClaro.png; sourceTree = "<group>"; };
+		61AC8FC61C3451D7002D81FB /* cafeFuerte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cafeFuerte.png; sourceTree = "<group>"; };
+		61D95AFE1C55F41B00015FB3 /* ExtraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtraViewController.swift; sourceTree = "<group>"; };
+		61D95B001C560A7700015FB3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		61E5F0801C27689E00DC0EFF /* carneMexi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = carneMexi.png; sourceTree = "<group>"; };
+		61E5F0821C276A5700DC0EFF /* blackColorMexi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackColorMexi.png; sourceTree = "<group>"; };
+		61E5F0831C276A5700DC0EFF /* brownColorMexi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = brownColorMexi.png; sourceTree = "<group>"; };
+		61FF74231C4AF5070092C4C7 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
+		61FF74251C4AF52B0092C4C7 /* startWhite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = startWhite.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A1F2ACA1BEFEC9A00B88729 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61D95B011C560A7700015FB3 /* MapKit.framework in Frameworks */,
+				614072201C44ABD10014D7B1 /* libsqlite3.0.tbd in Frameworks */,
+				275E71541C445AAD009CB9B6 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4A1F2AC41BEFEC9A00B88729 = {
+			isa = PBXGroup;
+			children = (
+				616010651C5F45C80050A60E /* imagenPerfil.txt */,
+				61D95B001C560A7700015FB3 /* MapKit.framework */,
+				6140721F1C44ABD00014D7B1 /* libsqlite3.0.tbd */,
+				275E71531C445AAD009CB9B6 /* AVFoundation.framework */,
+				4A1F2ACF1BEFEC9A00B88729 /* Suprema Salsa */,
+				4A1F2ACE1BEFEC9A00B88729 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4A1F2ACE1BEFEC9A00B88729 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A1F2ACD1BEFEC9A00B88729 /* Suprema Salsa.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A1F2ACF1BEFEC9A00B88729 /* Suprema Salsa */ = {
+			isa = PBXGroup;
+			children = (
+				4A8691F71C4DFD69008CAAD4 /* Internet */,
+				6165A0F11BF00D2700D818A9 /* Otros */,
+				6165A0EC1BF0094000D818A9 /* OtrasClases */,
+				6165A0EB1BF0092F00D818A9 /* Principal_Compras */,
+				6165A0D81BEFEF1000D818A9 /* SlideOutMenu */,
+				4A1F2AD01BEFEC9A00B88729 /* AppDelegate.swift */,
+				275E71551C446E9F009CB9B6 /* TriangleSound.mp3 */,
+				615C7CF11C278D4E002B88F7 /* logo_top_navigationbar_120x35px.png */,
+				61A267A51C5F0ECA00E1B4C0 /* 55619.png */,
+				61A267A61C5F0ECA00E1B4C0 /* fb_black.png */,
+				61A267A71C5F0ECA00E1B4C0 /* FONDO.png */,
+				61AC8FC51C3451D7002D81FB /* cafeClaro.png */,
+				61AC8FC61C3451D7002D81FB /* cafeFuerte.png */,
+				270E74D41C29C35F005A6D6D /* TacoHD.png */,
+				61FF74251C4AF52B0092C4C7 /* startWhite.png */,
+				61E5F0801C27689E00DC0EFF /* carneMexi.png */,
+				61FF74231C4AF5070092C4C7 /* star.png */,
+				270E74D01C29BD4E005A6D6D /* e82807f2784c9ab7932cf47e0a9962e7.jpeg */,
+				272E64B01C2E411B0063647F /* SELLO TIF.png */,
+				61E5F0821C276A5700DC0EFF /* blackColorMexi.png */,
+				273EA9AD1C3868C200D85048 /* PressedColor.png */,
+				61E5F0831C276A5700DC0EFF /* brownColorMexi.png */,
+			);
+			path = "Suprema Salsa";
+			sourceTree = "<group>";
+		};
+		4A8691F71C4DFD69008CAAD4 /* Internet */ = {
+			isa = PBXGroup;
+			children = (
+				4A8691F81C4DFDCF008CAAD4 /* Internet.swift */,
+			);
+			name = Internet;
+			sourceTree = "<group>";
+		};
+		612462CE1C229F6E0091539E /* productosPrueba */ = {
+			isa = PBXGroup;
+			children = (
+				6165A11A1BF015CC00D818A9 /* aguaHorchata.png */,
+				6165A11B1BF015CC00D818A9 /* aguaJamaica.png */,
+				6165A11C1BF015CC00D818A9 /* aguasimple.png */,
+				6165A11D1BF015CC00D818A9 /* arabeKilo.png */,
+				6165A11E1BF015CC00D818A9 /* arrachera.png */,
+				6165A11F1BF015CC00D818A9 /* burrito.png */,
+				6165A1201BF015CC00D818A9 /* carnepastormenu.png */,
+				6165A1211BF015CC00D818A9 /* cebollitas.png */,
+				6165A1221BF015CC00D818A9 /* chalupas.png */,
+				6165A1231BF015CC00D818A9 /* Chistorra.png */,
+				6165A1241BF015CC00D818A9 /* cincoTacosPastor.png */,
+				6165A1251BF015CC00D818A9 /* cochinita2.png */,
+				6165A1261BF015CC00D818A9 /* costillas.png */,
+				6165A1271BF015CC00D818A9 /* frijoles.png */,
+				6165A1281BF015CC00D818A9 /* gringa.png */,
+				6165A1291BF015CC00D818A9 /* sincronizada.png */,
+				6165A12A1BF015CC00D818A9 /* sirlon.png */,
+				6165A12B1BF015CC00D818A9 /* taco arabe.png */,
+				6165A12C1BF015CC00D818A9 /* tacobistec.png */,
+				6165A12D1BF015CC00D818A9 /* unTacoPastor.png */,
+			);
+			name = productosPrueba;
+			sourceTree = "<group>";
+		};
+		614072211C44AC090014D7B1 /* BaseDatos */ = {
+			isa = PBXGroup;
+			children = (
+				614072221C44AC1C0014D7B1 /* DBSupremaSalsa.sqlite */,
+				614072231C44AC1C0014D7B1 /* FMDatabase.h */,
+				614072241C44AC1C0014D7B1 /* FMDatabase.m */,
+				614072251C44AC1C0014D7B1 /* FMResultSet.h */,
+				614072261C44AC1C0014D7B1 /* FMDatabaseAdditions.h */,
+				614072271C44AC1C0014D7B1 /* FMDatabaseAdditions.m */,
+				614072281C44AC1C0014D7B1 /* FMDatabasePool.h */,
+				614072291C44AC1C0014D7B1 /* FMDatabasePool.m */,
+				6140722A1C44AC1C0014D7B1 /* FMDatabaseQueue.h */,
+				6140722B1C44AC1C0014D7B1 /* FMDatabaseQueue.m */,
+				6140722C1C44AC1C0014D7B1 /* FMResultSet.m */,
+			);
+			name = BaseDatos;
+			sourceTree = "<group>";
+		};
+		614072331C44AC790014D7B1 /* AccesDB */ = {
+			isa = PBXGroup;
+			children = (
+				614072341C44AC880014D7B1 /* Utility.swift */,
+				614072351C44AC880014D7B1 /* ModelManager.swift */,
+				614072361C44AC880014D7B1 /* productos.swift */,
+				4A848E4A1C500B23004FF1FA /* Cupones.swift */,
+			);
+			name = AccesDB;
+			sourceTree = "<group>";
+		};
+		6165A0D81BEFEF1000D818A9 /* SlideOutMenu */ = {
+			isa = PBXGroup;
+			children = (
+				614072331C44AC790014D7B1 /* AccesDB */,
+				614072211C44AC090014D7B1 /* BaseDatos */,
+				6165A0DC1BEFEF3600D818A9 /* SWRevealViewController.h */,
+				6165A0DD1BEFEF3600D818A9 /* SWRevealViewController.m */,
+				6165A0DB1BEFEF3500D818A9 /* Suprema Salsa-Bridging-Header.h */,
+			);
+			name = SlideOutMenu;
+			sourceTree = "<group>";
+		};
+		6165A0EB1BF0092F00D818A9 /* Principal_Compras */ = {
+			isa = PBXGroup;
+			children = (
+				6165A0E11BEFF6BF00D818A9 /* CartaViewController.swift */,
+				6165A0ED1BF00B5D00D818A9 /* CartaCollectionViewCell.swift */,
+				275E71571C447589009CB9B6 /* CompraViewController.swift */,
+				275E71591C44783E009CB9B6 /* CompraTableViewCell.swift */,
+				6165A0E31BEFF6D600D818A9 /* CuponesViewController.swift */,
+				6175118E1C5522BF006F8E14 /* CuponesTableViewCell.swift */,
+				61AC8FC31C34519F002D81FB /* ADVSegmentedControl.swift */,
+				4A1F2AD41BEFEC9A00B88729 /* Main.storyboard */,
+				61D95AFE1C55F41B00015FB3 /* ExtraViewController.swift */,
+			);
+			name = Principal_Compras;
+			sourceTree = "<group>";
+		};
+		6165A0EC1BF0094000D818A9 /* OtrasClases */ = {
+			isa = PBXGroup;
+			children = (
+				4A24A3561C54275100B947E3 /* persona.swift */,
+				4A24A3541C5426FE00B947E3 /* RegistroViewController.swift */,
+				6165A0E71BEFF6F700D818A9 /* SettingsViewController.swift */,
+				6165A0E51BEFF6EC00D818A9 /* SucursalesViewController.swift */,
+				6165A0E91BF0086A00D818A9 /* CuentaViewController.swift */,
+			);
+			name = OtrasClases;
+			sourceTree = "<group>";
+		};
+		6165A0F11BF00D2700D818A9 /* Otros */ = {
+			isa = PBXGroup;
+			children = (
+				612462CE1C229F6E0091539E /* productosPrueba */,
+				4A1F2AD71BEFEC9A00B88729 /* Assets.xcassets */,
+				612462CF1C229F8C0091539E /* backgroundNB.png */,
+				4A1F2AD91BEFEC9A00B88729 /* LaunchScreen.storyboard */,
+				4A1F2ADC1BEFEC9A00B88729 /* Info.plist */,
+				4A4D431F1BEFFB750021379F /* SideMenu.swift */,
+			);
+			name = Otros;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4A1F2ACC1BEFEC9A00B88729 /* Suprema Salsa */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A1F2ADF1BEFEC9A00B88729 /* Build configuration list for PBXNativeTarget "Suprema Salsa" */;
+			buildPhases = (
+				4A1F2AC91BEFEC9A00B88729 /* Sources */,
+				4A1F2ACA1BEFEC9A00B88729 /* Frameworks */,
+				4A1F2ACB1BEFEC9A00B88729 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Suprema Salsa";
+			productName = "Suprema Salsa";
+			productReference = 4A1F2ACD1BEFEC9A00B88729 /* Suprema Salsa.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A1F2AC51BEFEC9A00B88729 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "miguel mexicano";
+				TargetAttributes = {
+					4A1F2ACC1BEFEC9A00B88729 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = 36Q3L5B6AH;
+					};
+				};
+			};
+			buildConfigurationList = 4A1F2AC81BEFEC9A00B88729 /* Build configuration list for PBXProject "Suprema Salsa" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4A1F2AC41BEFEC9A00B88729;
+			productRefGroup = 4A1F2ACE1BEFEC9A00B88729 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A1F2ACC1BEFEC9A00B88729 /* Suprema Salsa */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A1F2ACB1BEFEC9A00B88729 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				61AC8FC71C3451D7002D81FB /* cafeClaro.png in Resources */,
+				6165A12F1BF015CC00D818A9 /* aguaJamaica.png in Resources */,
+				6165A1351BF015CC00D818A9 /* cebollitas.png in Resources */,
+				272E64B11C2E411B0063647F /* SELLO TIF.png in Resources */,
+				6140722D1C44AC1C0014D7B1 /* DBSupremaSalsa.sqlite in Resources */,
+				6165A1321BF015CC00D818A9 /* arrachera.png in Resources */,
+				4A1F2ADB1BEFEC9A00B88729 /* LaunchScreen.storyboard in Resources */,
+				4A1F2AD81BEFEC9A00B88729 /* Assets.xcassets in Resources */,
+				61E5F0851C276A5700DC0EFF /* brownColorMexi.png in Resources */,
+				616010661C5F45C80050A60E /* imagenPerfil.txt in Resources */,
+				61E5F0811C27689E00DC0EFF /* carneMexi.png in Resources */,
+				6165A1331BF015CC00D818A9 /* burrito.png in Resources */,
+				6165A13B1BF015CC00D818A9 /* frijoles.png in Resources */,
+				61E5F0841C276A5700DC0EFF /* blackColorMexi.png in Resources */,
+				6165A1381BF015CC00D818A9 /* cincoTacosPastor.png in Resources */,
+				61A267AB1C5F0ECA00E1B4C0 /* FONDO.png in Resources */,
+				61FF74261C4AF52B0092C4C7 /* startWhite.png in Resources */,
+				6165A13E1BF015CC00D818A9 /* sirlon.png in Resources */,
+				61A267A91C5F0ECA00E1B4C0 /* 55619.png in Resources */,
+				270E74D11C29BD4E005A6D6D /* e82807f2784c9ab7932cf47e0a9962e7.jpeg in Resources */,
+				6165A1371BF015CC00D818A9 /* Chistorra.png in Resources */,
+				61A267AA1C5F0ECA00E1B4C0 /* fb_black.png in Resources */,
+				6165A13F1BF015CC00D818A9 /* taco arabe.png in Resources */,
+				6165A1411BF015CC00D818A9 /* unTacoPastor.png in Resources */,
+				6165A1311BF015CC00D818A9 /* arabeKilo.png in Resources */,
+				4A1F2AD61BEFEC9A00B88729 /* Main.storyboard in Resources */,
+				6165A1361BF015CC00D818A9 /* chalupas.png in Resources */,
+				6165A1341BF015CC00D818A9 /* carnepastormenu.png in Resources */,
+				6165A12E1BF015CC00D818A9 /* aguaHorchata.png in Resources */,
+				6165A1301BF015CC00D818A9 /* aguasimple.png in Resources */,
+				270E74D51C29C35F005A6D6D /* TacoHD.png in Resources */,
+				6165A13D1BF015CC00D818A9 /* sincronizada.png in Resources */,
+				273EA9AE1C3868C200D85048 /* PressedColor.png in Resources */,
+				612462D01C229F8C0091539E /* backgroundNB.png in Resources */,
+				615C7CF21C278D4E002B88F7 /* logo_top_navigationbar_120x35px.png in Resources */,
+				275E71561C446E9F009CB9B6 /* TriangleSound.mp3 in Resources */,
+				6165A13C1BF015CC00D818A9 /* gringa.png in Resources */,
+				6165A13A1BF015CC00D818A9 /* costillas.png in Resources */,
+				6165A1401BF015CC00D818A9 /* tacobistec.png in Resources */,
+				61FF74241C4AF5070092C4C7 /* star.png in Resources */,
+				61AC8FC81C3451D7002D81FB /* cafeFuerte.png in Resources */,
+				6165A1391BF015CC00D818A9 /* cochinita2.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A1F2AC91BEFEC9A00B88729 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				275E715A1C44783E009CB9B6 /* CompraTableViewCell.swift in Sources */,
+				61D95AFF1C55F41B00015FB3 /* ExtraViewController.swift in Sources */,
+				4A24A3551C5426FE00B947E3 /* RegistroViewController.swift in Sources */,
+				61AC8FC41C34519F002D81FB /* ADVSegmentedControl.swift in Sources */,
+				614072371C44AC880014D7B1 /* Utility.swift in Sources */,
+				4A8691F91C4DFDCF008CAAD4 /* Internet.swift in Sources */,
+				6140722E1C44AC1C0014D7B1 /* FMDatabase.m in Sources */,
+				6165A0EA1BF0086A00D818A9 /* CuentaViewController.swift in Sources */,
+				6165A0E41BEFF6D600D818A9 /* CuponesViewController.swift in Sources */,
+				6140722F1C44AC1C0014D7B1 /* FMDatabaseAdditions.m in Sources */,
+				6165A0E81BEFF6F700D818A9 /* SettingsViewController.swift in Sources */,
+				614072301C44AC1C0014D7B1 /* FMDatabasePool.m in Sources */,
+				614072381C44AC880014D7B1 /* ModelManager.swift in Sources */,
+				4A4D43201BEFFB750021379F /* SideMenu.swift in Sources */,
+				614072311C44AC1C0014D7B1 /* FMDatabaseQueue.m in Sources */,
+				6165A0E61BEFF6EC00D818A9 /* SucursalesViewController.swift in Sources */,
+				614072391C44AC880014D7B1 /* productos.swift in Sources */,
+				4A24A3571C54275100B947E3 /* persona.swift in Sources */,
+				6175118F1C5522BF006F8E14 /* CuponesTableViewCell.swift in Sources */,
+				4A1F2AD11BEFEC9A00B88729 /* AppDelegate.swift in Sources */,
+				6165A0E21BEFF6BF00D818A9 /* CartaViewController.swift in Sources */,
+				614072321C44AC1C0014D7B1 /* FMResultSet.m in Sources */,
+				275E71581C447589009CB9B6 /* CompraViewController.swift in Sources */,
+				4A848E4B1C500B23004FF1FA /* Cupones.swift in Sources */,
+				6165A0DE1BEFEF3600D818A9 /* SWRevealViewController.m in Sources */,
+				6165A0EE1BF00B5D00D818A9 /* CartaCollectionViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4A1F2AD41BEFEC9A00B88729 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A1F2AD51BEFEC9A00B88729 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4A1F2AD91BEFEC9A00B88729 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A1F2ADA1BEFEC9A00B88729 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4A1F2ADD1BEFEC9A00B88729 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4A1F2ADE1BEFEC9A00B88729 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4A1F2AE01BEFEC9A00B88729 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Suprema Salsa/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "touchandswipe.Suprema-Salsa";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Suprema Salsa/Suprema Salsa-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4A1F2AE11BEFEC9A00B88729 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "Suprema Salsa/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "touchandswipe.Suprema-Salsa";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Suprema Salsa/Suprema Salsa-Bridging-Header.h";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4A1F2AC81BEFEC9A00B88729 /* Build configuration list for PBXProject "Suprema Salsa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A1F2ADD1BEFEC9A00B88729 /* Debug */,
+				4A1F2ADE1BEFEC9A00B88729 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A1F2ADF1BEFEC9A00B88729 /* Build configuration list for PBXNativeTarget "Suprema Salsa" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A1F2AE01BEFEC9A00B88729 /* Debug */,
+				4A1F2AE11BEFEC9A00B88729 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A1F2AC51BEFEC9A00B88729 /* Project object */;
+}
