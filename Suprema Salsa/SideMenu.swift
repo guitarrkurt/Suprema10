@@ -24,32 +24,30 @@ class SideMenu: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let bgColorView = UIView()
+        bgColorView.backgroundColor = UIColor(patternImage: UIImage(named: "cafeClaro.png")!)
+        //bgColorView.layer.cornerRadius = 8
         
-        self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "launch_screen_ipad_1536x2048.jpg")!)
-        //self.tableView.backgroundView?.backgroundColor = UIColor(patternImage: UIImage(named: "blurfo.jpg")!)
+        self.tableView.backgroundColor = UIColor(patternImage: UIImage(named: "fondo_ipad_menu_tercio_pantalla_512x2048")!)
         self.tableView.separatorColor = UIColor.clearColor()
         
-        //UIColor.purpleColor().colorWithAlphaComponent(0.1)
-        
-        
         Logo.backgroundColor = UIColor.clearColor()
+        Logo.selectedBackgroundView = bgColorView
+        
         Cupones.backgroundColor = UIColor.clearColor()
+        Cupones.selectedBackgroundView = bgColorView
+        
         perfil.backgroundColor = UIColor.clearColor()
+        perfil.selectedBackgroundView = bgColorView
         
-        //perfil.backgroundView?.backgroundColor = UIColor.clearColor()
         compras.backgroundColor = UIColor.clearColor()
-        //compras.backgroundView?.backgroundColor = UIColor.clearColor().colorWithAlphaComponent(0.1)
+        compras.selectedBackgroundView = bgColorView
+        
         mapas.backgroundColor = UIColor.clearColor()
-        //mapas.backgroundView?.backgroundColor = UIColor.clearColor().colorWithAlphaComponent(0.1)
+        mapas.selectedBackgroundView = bgColorView
+        
         setting.backgroundColor = UIColor.clearColor()
-        //setting.backgroundView?.backgroundColor = UIColor.clearColor().colorWithAlphaComponent(0.1)
-        
-        
+        setting.selectedBackgroundView = bgColorView
         
     }
 

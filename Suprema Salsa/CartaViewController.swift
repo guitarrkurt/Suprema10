@@ -10,7 +10,8 @@ import UIKit
 import AVFoundation
 import Social
 
-class CartaViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, ComprasDelegated {
+class CartaViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, ComprasDelegated{
+//, IngredientesExtraDelegate {
     // MARK: - Propertys
     /*Arrays*/
     
@@ -25,6 +26,7 @@ class CartaViewController: UIViewController, UICollectionViewDataSource, UIColle
     var formatoURLImage: NSURL!
     let paths          : String = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
     let fileManager             = NSFileManager.defaultManager()
+    var arrayIngreExtrCompra         = [String]()
     /*Referencias Views - View Principal*/
     @IBOutlet weak var segmentedControl   : ADVSegmentedControl!// Segmented Control
     @IBOutlet var ViewContenedorBack      : UIView!
@@ -46,6 +48,7 @@ class CartaViewController: UIViewController, UICollectionViewDataSource, UIColle
     @IBOutlet weak var VDNombreProducto: UILabel!
     @IBOutlet weak var VDExtra  : UIButton!
     
+    @IBOutlet weak var VDLeftImage    : UIImageView!
     @IBOutlet weak var VDLogoTiff      : UIImageView!
     @IBOutlet weak var VDFavoritos     : UIButton!
     @IBOutlet weak var VDCompartir     : UIButton!
@@ -89,7 +92,7 @@ class CartaViewController: UIViewController, UICollectionViewDataSource, UIColle
             self.menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        //Mexi
+        //Mexi ⚠️
        
         self.FavoritoOFF(1)
         
@@ -144,14 +147,15 @@ class CartaViewController: UIViewController, UICollectionViewDataSource, UIColle
         }
 
     }
-    override func viewWillAppear(animated: Bool) {// Mexi
-        super.viewWillAppear(animated);
-        self.cartaCollectionView.reloadData()
-    }
+//    override func viewWillAppear(animated: Bool) {// Mexi
+//        super.viewWillAppear(animated);
+////        self.cartaCollectionView.reloadData()
+//    }
     
     // MARK: - Actions
     /*Actions Vista Detallada*/
     @IBAction func VDFAvoritosAction(sender: UIButton) {
+        print("id 😼: \(producto.idProductos)")
         if(ModelManager.getInstance().isFavorito(producto.idProductos)){
             sender.setImage(UIImage(named: "favoritos.png"), forState: .Normal)
             self.FavoritoOFF(producto.idProductos)
@@ -167,6 +171,7 @@ class CartaViewController: UIViewController, UICollectionViewDataSource, UIColle
         
     }
     @IBAction func VDCompartirAction(sender: UIButton) {
+        print("id 😼: \(producto.idProductos)")
         // Create the action sheet
         let myActionSheet = UIAlertController(title: "Comparte", message: "Que te gustaria compartir", preferredStyle: UIAlertControllerStyle.ActionSheet)
         
@@ -226,6 +231,7 @@ class CartaViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
 
     @IBAction func VDCarritoAction(sender: UIButton) {// Agregar carrito action
+        print("producto.NombreP: \(producto.NombreP)")
         self.arrayCompra.append(self.producto.idProductos)
         print(arrayCompra)
 
@@ -254,10 +260,12 @@ class CartaViewController: UIViewController, UICollectionViewDataSource, UIColle
             carritoBarButtonDidSet("carrito_panel_superior_Mas.png")
         }
         carritoBarButton_SonidoYAnimacion()
-        ocultarVistaDetallada1_3Segundos()
+        arrayIngreExtrCompra = []
+        //ocultarVistaDetallada1_3Segundos()
     }
     
     @IBAction func ocultarVistaDetallada(sender: UIButton) {
+        arrayIngreExtrCompra = []
         ocultarVistaDetallada0_3Segundos()
     }
     
@@ -392,6 +400,7 @@ class CartaViewController: UIViewController, UICollectionViewDataSource, UIColle
         if (fileManager.fileExistsAtPath(getImagePath))
         {
             let imageis: UIImage = UIImage(contentsOfFile: getImagePath)!
+            self.VDLeftImage.image = imageis
             self.VDSouthImage.image = imageis
         }
 
@@ -563,6 +572,8 @@ class CartaViewController: UIViewController, UICollectionViewDataSource, UIColle
         self.fileManager.createFileAtPath(filePathToWrite, contents: jpgImageData, attributes: nil)
         return nombreimagen
     }
+    
+    
     func searchProduct(productDB: productos)
     {
         marrProductData = NSMutableArray()
@@ -773,7 +784,7 @@ class CartaViewController: UIViewController, UICollectionViewDataSource, UIColle
             carritoBarButtonDidSet("carrito_panel_superior_Mas.png")
         }
     }
-
+    
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "compraIdentifier" {
@@ -781,9 +792,22 @@ class CartaViewController: UIViewController, UICollectionViewDataSource, UIColle
             compravc.arrayCompra = arrayCompra
             compravc.esclavo = self
             
-            
+        }
+        if segue.identifier == "ExtraIdentifier"{
+            let compravc = segue.destinationViewController as! ExtraViewController
+            print("id enviado: \(producto.idProductos)")
+            compravc.idProducto = producto.idProductos
+            compravc.arrayIngreExtrCompra = arrayIngreExtrCompra
         }
     }
-
+    // Checar Mexi ⚠️
+    @IBAction func unwindToCarta(segue: UIStoryboardSegue) {
+        if let yellowViewController = segue.sourceViewController as? ExtraViewController {
+            arrayIngreExtrCompra = yellowViewController.arrayIngreExtSeleccionados
+                    for index in arrayIngreExtrCompra{
+                        print(index)
+                    }
+        }
+    }
 
 }

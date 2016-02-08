@@ -20,10 +20,10 @@
 		4A1F2AD81BEFEC9A00B88729 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A1F2AD71BEFEC9A00B88729 /* Assets.xcassets */; };
 		4A1F2ADB1BEFEC9A00B88729 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A1F2AD91BEFEC9A00B88729 /* LaunchScreen.storyboard */; };
 		4A24A3551C5426FE00B947E3 /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A24A3541C5426FE00B947E3 /* RegistroViewController.swift */; };
-		4A24A3571C54275100B947E3 /* persona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A24A3561C54275100B947E3 /* persona.swift */; };
 		4A4D43201BEFFB750021379F /* SideMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D431F1BEFFB750021379F /* SideMenu.swift */; };
 		4A848E4B1C500B23004FF1FA /* Cupones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A848E4A1C500B23004FF1FA /* Cupones.swift */; };
 		4A8691F91C4DFDCF008CAAD4 /* Internet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8691F81C4DFDCF008CAAD4 /* Internet.swift */; };
+		4AFAF04B1C66A43300945687 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFAF04A1C66A43300945687 /* Usuario.swift */; };
 		612462D01C229F8C0091539E /* backgroundNB.png in Resources */ = {isa = PBXBuildFile; fileRef = 612462CF1C229F8C0091539E /* backgroundNB.png */; };
 		614072201C44ABD10014D7B1 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6140721F1C44ABD00014D7B1 /* libsqlite3.0.tbd */; };
 		6140722D1C44AC1C0014D7B1 /* DBSupremaSalsa.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 614072221C44AC1C0014D7B1 /* DBSupremaSalsa.sqlite */; };
@@ -96,10 +96,10 @@
 		4A1F2ADA1BEFEC9A00B88729 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A1F2ADC1BEFEC9A00B88729 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A24A3541C5426FE00B947E3 /* RegistroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
-		4A24A3561C54275100B947E3 /* persona.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = persona.swift; sourceTree = "<group>"; };
 		4A4D431F1BEFFB750021379F /* SideMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenu.swift; sourceTree = "<group>"; };
 		4A848E4A1C500B23004FF1FA /* Cupones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cupones.swift; sourceTree = "<group>"; };
 		4A8691F81C4DFDCF008CAAD4 /* Internet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Internet.swift; sourceTree = "<group>"; };
+		4AFAF04A1C66A43300945687 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		612462CF1C229F8C0091539E /* backgroundNB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundNB.png; sourceTree = "<group>"; };
 		6140721F1C44ABD00014D7B1 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		614072221C44AC1C0014D7B1 /* DBSupremaSalsa.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = DBSupremaSalsa.sqlite; sourceTree = "<group>"; };
@@ -286,6 +286,7 @@
 				614072351C44AC880014D7B1 /* ModelManager.swift */,
 				614072361C44AC880014D7B1 /* productos.swift */,
 				4A848E4A1C500B23004FF1FA /* Cupones.swift */,
+				4AFAF04A1C66A43300945687 /* Usuario.swift */,
 			);
 			name = AccesDB;
 			sourceTree = "<group>";
@@ -321,7 +322,6 @@
 		6165A0EC1BF0094000D818A9 /* OtrasClases */ = {
 			isa = PBXGroup;
 			children = (
-				4A24A3561C54275100B947E3 /* persona.swift */,
 				4A24A3541C5426FE00B947E3 /* RegistroViewController.swift */,
 				6165A0E71BEFF6F700D818A9 /* SettingsViewController.swift */,
 				6165A0E51BEFF6EC00D818A9 /* SucursalesViewController.swift */,
@@ -471,12 +471,12 @@
 				614072311C44AC1C0014D7B1 /* FMDatabaseQueue.m in Sources */,
 				6165A0E61BEFF6EC00D818A9 /* SucursalesViewController.swift in Sources */,
 				614072391C44AC880014D7B1 /* productos.swift in Sources */,
-				4A24A3571C54275100B947E3 /* persona.swift in Sources */,
 				6175118F1C5522BF006F8E14 /* CuponesTableViewCell.swift in Sources */,
 				4A1F2AD11BEFEC9A00B88729 /* AppDelegate.swift in Sources */,
 				6165A0E21BEFF6BF00D818A9 /* CartaViewController.swift in Sources */,
 				614072321C44AC1C0014D7B1 /* FMResultSet.m in Sources */,
 				275E71581C447589009CB9B6 /* CompraViewController.swift in Sources */,
+				4AFAF04B1C66A43300945687 /* Usuario.swift in Sources */,
 				4A848E4B1C500B23004FF1FA /* Cupones.swift in Sources */,
 				6165A0DE1BEFEF3600D818A9 /* SWRevealViewController.m in Sources */,
 				6165A0EE1BF00B5D00D818A9 /* CartaCollectionViewCell.swift in Sources */,

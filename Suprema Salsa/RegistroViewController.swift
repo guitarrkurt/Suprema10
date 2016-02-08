@@ -11,6 +11,9 @@ import UIKit
 class RegistroViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var datePicker: UIDatePicker!
+    var  marrUserData: NSMutableArray!
+    let paths          : String = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
+    let fileManager             = NSFileManager.defaultManager()
 //    @IBOutlet weak var nombrePerfil: UILabel!
 //    @IBOutlet weak var apellidosPerfil: UILabel!
     
@@ -18,7 +21,7 @@ class RegistroViewController: UIViewController, UIImagePickerControllerDelegate,
     var okAction: UIAlertAction!
     
     //Clase persona que contiene todos los atributos del REGISTRO
-    var p = persona()
+    var p = Usuario()
     
     //Seleccionar imagenes galeria
     //NOTA: Es diferente IMAGE PICKER vs. DATE PICKER
@@ -56,6 +59,42 @@ class RegistroViewController: UIViewController, UIImagePickerControllerDelegate,
         fotoPerfil.layer.borderColor = UIColor(patternImage: UIImage(named: "cafeClaro.png")!).CGColor
         fotoPerfil.layer.cornerRadius = fotoPerfil.frame.size.height/2
         fotoPerfil.clipsToBounds = true
+        
+        
+        
+        if(self.ThereisUser() > 0)
+        {
+            
+            marrUserData = NSMutableArray()
+            marrUserData = ModelManager.getInstance().getAllUsers()
+            
+            for index in 0..<marrUserData.count
+            {
+                let usuarios:Usuario = marrUserData.objectAtIndex(index) as! Usuario
+                
+                //CellCarta.imageView.image = UIImage(named: producto.ImagenP)
+                let getImagePath = (paths as NSString).stringByAppendingPathComponent(usuarios.Foto)
+                
+                
+                if (fileManager.fileExistsAtPath(getImagePath))
+                {
+                    let imageis: UIImage = UIImage(contentsOfFile: getImagePath)!
+                    fotoPerfil.setImage(imageis, forState: .Normal)
+                }
+                
+                
+               self.nombre.text = usuarios.Nombre
+               self.apellidos.text = usuarios.Apellidos
+               self.correo.text = usuarios.Correo
+               self.telefono.text = usuarios.Telefono
+               self.direccion.text = usuarios.Direccion
+               self.codigoPostal.text = usuarios.CP
+               
+            }
+            
+          
+        }
+        
 
     }
 
@@ -76,7 +115,7 @@ class RegistroViewController: UIViewController, UIImagePickerControllerDelegate,
         let strDate = dateFormatter.stringFromDate(sender.date)
         
         print("Fecha cumpleaños (strDate): \(strDate)")
-        self.p.cumpleanos = strDate
+        self.p.Cumpleaños = strDate
     }
     
     // MARK: - UIImagePickerControllerDelegate Methods
@@ -105,16 +144,28 @@ class RegistroViewController: UIViewController, UIImagePickerControllerDelegate,
     let camposObliMessage = "Los campos marcados con \'*\' son obligatorios. Por favor completa todos los campos."
         
     //Conseguimos todos los campos
-    p.nombre = self.nombre.text
-    p.apellidos = self.apellidos.text
-    p.correo = self.correo.text
-    p.telefono = self.telefono.text
-    p.direccion = self.direccion.text
-    p.codigoPostal = self.codigoPostal.text
-    print("cumple: \(self.p.cumpleanos)")
+    p.idusuario=1
+    p.Nombre = self.nombre.text!
+    p.Apellidos = self.apellidos.text!
+    p.Correo = self.correo.text!
+    p.Telefono = self.telefono.text!
+    p.Direccion = self.direccion.text!
+    p.CP = self.codigoPostal.text!
+    p.Foto = "perfil.jpg"
+        
+        
+        let filePathToWrite = "\(self.paths)/perfil.jpg"
+        
+        print("Ruta de la imagen: \(filePathToWrite)")
+        // let imageData: NSData = UIImagePNGRepresentation(selectedImage)!
+        let jpgImageData = UIImageJPEGRepresentation((fotoPerfil.imageView?.image!)!, 1.0)
+        self.fileManager.createFileAtPath(filePathToWrite, contents: jpgImageData, attributes: nil)
+        
+        
+        
         
         //Si todos los campos marcados con * estan LLENOS
-        if(p.nombre != "" && p.apellidos != "" && p.correo != "" && p.telefono != "" && p.direccion != "" && p.codigoPostal != ""){
+        if(p.Nombre != "" && p.Apellidos != "" && p.Correo != "" && p.Telefono != "" && p.Direccion != "" && p.CP != ""){
             
             //Creamos el ALERT CONTROLLER
             alertController = UIAlertController(title: cdsTitle, message: cdsMessage, preferredStyle: .Alert)
@@ -137,6 +188,9 @@ class RegistroViewController: UIViewController, UIImagePickerControllerDelegate,
                 
                 //Preguntamos SI las DOS CONTRASENAS son las MISMAS
                 if(self.alertController.textFields![0].text == self.alertController.textFields![1].text){
+                    
+                    ModelManager.getInstance().addUser(self.p)
+                    self.ImprimirUsuarios()
                     
                     let alert = UIAlertController(title: "Datos Guardados Correctamente", message: "Empieza a disfrutar de nuestras promociones ¡Hazte Supremo! 🌮", preferredStyle: UIAlertControllerStyle.Alert)
                     alert.addAction(UIAlertAction(title: "❤️", style: UIAlertActionStyle.Default, handler: nil))
@@ -163,6 +217,48 @@ class RegistroViewController: UIViewController, UIImagePickerControllerDelegate,
 
     }
 
+    
+    func ImprimirUsuarios()
+    {
+        marrUserData = NSMutableArray()
+        marrUserData = ModelManager.getInstance().getAllUsers()
+        
+        print("array de Usuarios es: ")
+        
+        for index in 0..<marrUserData.count
+        {
+            let usuarios:Usuario = marrUserData.objectAtIndex(index) as! Usuario
+            
+            print(usuarios.idusuario)
+            print(usuarios.Foto)
+            print(usuarios.Nombre)
+            print(usuarios.Apellidos)
+            print(usuarios.Correo)
+            print(usuarios.Telefono)
+            print(usuarios.Direccion)
+            print(usuarios.CP)
+            print(usuarios.Cumpleaños)
+            
+            print(" ")
+        }
+    }
+    
+    
+    func ThereisUser()->Int
+    {
+        marrUserData = NSMutableArray()
+        marrUserData = ModelManager.getInstance().getAllUsers()
+        
+        print(marrUserData.count)
+        
+      return marrUserData.count
+    }
+    
+    
+
+    
+    
+    
     
     
 }

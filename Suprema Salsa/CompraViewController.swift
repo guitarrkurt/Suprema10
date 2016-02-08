@@ -16,10 +16,13 @@ class CompraViewController: UIViewController, UITableViewDataSource, UITableView
    //Animacion
     @IBOutlet weak var animacionBackground: UIView!
     @IBOutlet weak var animacionFigure: UIImageView!
+    @IBOutlet weak var editButton: UIBarButtonItem!
     
     @IBOutlet weak var animacionCross: UIButton!
     @IBOutlet weak var agregarCupon: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    
+    var banderaBotonEditar = true
     var arrayCompra    = [Int]()
     var imageList = [UIImage]()
     let fileManager             = NSFileManager.defaultManager()
@@ -33,6 +36,7 @@ class CompraViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         receivedData = NSMutableData(capacity: 0)
+
 
         //Agregamos el logo de la suprema en el top navigation bar
         let topNB = UIImage(named: "logo_top_navigationbar_120x35px.png")
@@ -123,6 +127,10 @@ class CompraViewController: UIViewController, UITableViewDataSource, UITableView
             
             self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             self.totalLabel.text = "Total: \(self.calcularPrecioTotal())"
+            
+            if(self.arrayCompra.count == 0){
+                self.navigationController?.popViewControllerAnimated(true)
+            }
         
         })
         
@@ -150,8 +158,6 @@ class CompraViewController: UIViewController, UITableViewDataSource, UITableView
       self.enviarDatos()
     
     }
-    
-    
     
     func enviarDatos()
     {
@@ -246,6 +252,13 @@ class CompraViewController: UIViewController, UITableViewDataSource, UITableView
         self.animacionCross.hidden = false
     }
     func runAnimacion(){
+
+//        Show:
+//        self.navigationItem.rightBarButtonItem.tintColor = [UIColor whiteColor];
+//        Hide:
+//        self.navigationItem.rightBarButtonItem.tintColor = [UIColor clearColor];
+        self.navigationItem.rightBarButtonItem!.tintColor = UIColor.clearColor() // Ocultamos el boton de EDITAR
+        
         self.animacionFigure.animationImages = imageList
         //Media Hora
         //let time = 1800.0
@@ -323,6 +336,17 @@ class CompraViewController: UIViewController, UITableViewDataSource, UITableView
         performSegueWithIdentifier("CuponIdentifier", sender: self)
     }
 
+    @IBAction func editarAction(sender: UIBarButtonItem) {
+        if(banderaBotonEditar == true){
+            banderaBotonEditar = false
+            self.navigationItem.rightBarButtonItem?.title = "Ok"
+            self.tableView.editing = true
+        }else{
+            banderaBotonEditar = true
+            self.navigationItem.rightBarButtonItem?.title = "Editar"
+            self.tableView.editing = false
+        }
+    }
     func cargarCuponCompras(newCupon: Cupones, newImagen: UIImage){
         //Haz algo con cupon
         print("\(newCupon.Imagen)")

@@ -20,6 +20,12 @@ class ModelManager: NSObject {
         }
         return sharedInstance
     }
+    
+    
+    
+    
+    
+ ///Metodos de Productos
     func updateProductData(ProductInfo: productos) -> Bool {
         sharedInstance.database!.open()
         let isUpdated = sharedInstance.database!.executeUpdate("UPDATE Productos SET NombreP=?, ImagenP=?, Precio=?, DescripcionP=?, idTipoPro=?,Updates=? WHERE idProductos=?", withArgumentsInArray: [ProductInfo.NombreP, ProductInfo.ImagenP, ProductInfo.Precio,ProductInfo.DescripcionP, ProductInfo.idTipoPro, ProductInfo.Updates, ProductInfo.idProductos])
@@ -210,4 +216,65 @@ class ModelManager: NSObject {
         print("chilaca marr.count: \(marrProductInfo.count)")
         return marrProductInfo
     }
+    
+    
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    ///////////funciones de la tabla usuario
+    
+    func addUser(UserInfo: Usuario) -> Bool
+    {
+        sharedInstance.database!.open()
+        let isInserted = sharedInstance.database!.executeUpdate("INSERT INTO Usuario(idusuario,Foto,Nombre,Apellidos,Correo,Telefono,Direccion,CP,Cumpleaños) VALUES (?, ?, ?, ?, ?, ?, ?,?,?)", withArgumentsInArray: [UserInfo.idusuario, UserInfo.Foto,UserInfo.Nombre, UserInfo.Apellidos, UserInfo.Correo, UserInfo.Telefono, UserInfo.Direccion,UserInfo.CP,UserInfo.Cumpleaños])
+        sharedInstance.database!.close()
+        return isInserted
+    }
+    
+    func getAllUsers() -> NSMutableArray {
+        sharedInstance.database!.open()
+        let resultSet: FMResultSet! = sharedInstance.database!.executeQuery("SELECT * FROM Usuario", withArgumentsInArray: nil)
+        let marrUserInfo : NSMutableArray = NSMutableArray()
+        if (resultSet != nil) {
+            while resultSet.next() {
+                let UserInfo : Usuario = Usuario()
+                UserInfo.idusuario = Int(resultSet.intForColumn("idusuario"))
+                UserInfo.Foto = resultSet.stringForColumn("Foto")
+                UserInfo.Nombre = resultSet.stringForColumn("Nombre")
+                UserInfo.Apellidos = resultSet.stringForColumn("Apellidos")
+                UserInfo.Correo = resultSet.stringForColumn("Correo")
+                UserInfo.Telefono = resultSet.stringForColumn("Telefono")
+                UserInfo.Direccion = resultSet.stringForColumn("Direccion")
+                UserInfo.CP = resultSet.stringForColumn("CP")
+                UserInfo.Cumpleaños = resultSet.stringForColumn("Cumpleaños")
+                marrUserInfo.addObject(UserInfo)
+            }
+        }
+        sharedInstance.database!.close()
+        return marrUserInfo
+    }
+//    func getProducto(id: Int) -> productos{
+//        sharedInstance.database!.open()
+//        let resultSet: FMResultSet! = sharedInstance.database!.executeQuery("SELECT * FROM Productos WHERE idProductos = \(id)", withArgumentsInArray: nil)
+//        let marrProductInfo : NSMutableArray = NSMutableArray()
+//        if (resultSet != nil) {
+//            while resultSet.next() {
+//                let ProductInfo : productos = productos()
+//                ProductInfo.idProductos = Int(resultSet.intForColumn("idProductos"))
+//                ProductInfo.NombreP = resultSet.stringForColumn("NombreP")
+//                ProductInfo.ImagenP = resultSet.stringForColumn("ImagenP")
+//                ProductInfo.Precio = resultSet.doubleForColumn("Precio")
+//                ProductInfo.DescripcionP = resultSet.stringForColumn("DescripcionP")
+//                ProductInfo.idTipoPro = Int(resultSet.intForColumn("idTipoPro"))
+//                ProductInfo.Updates = Int(resultSet.intForColumn("Updates"))
+//                marrProductInfo.addObject(ProductInfo)
+//            }
+//        }
+//        sharedInstance.database!.close()
+//        return marrProductInfo[0] as! productos
+//    }
+    func getIngredientesExtra(idProducto: Int) -> [String]{
+        print("El idProducto es: \(idProducto)")
+        return ["Cebolla 🍨", "Piña 🍔", "Cilantro 🌶", "Salsa Verde 🌯", "Jitomate 🍝", "Aguacate 🍆", "Mayonesa 🍇", "Mostaza 🍋", "Catsup 🍎", "Tortilla Integral 🌮"]
+    }
+    
+    
 }
